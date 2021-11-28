@@ -4,22 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Covid-19</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="app.js" defer="true"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
   </head>
-  <body onload="starthide()">
+  <body>
     <h1>COVID-19 STATS</h1>
       <header>
-          <a class ="link" onclick="indiatotal()">India Stats</a>
-          <a class="link2" onclick="statewise()">Filter By State</a>
+          <a class="link">India Stats</a>
+          <a class="link2">Filter By State</a>
       </header>
     <div class="divforflex">
-      <div class="stateflex">
+    <div class="stateflex">
     <div class="stateinput">
     <label>Enter state</label><br>
     <input id="userInput" type="text" placeholder="State Acronym" />
-    <button onclick="returnText()">Submit</button>
+    <button id="submitbtn">Submit</button>
     </div>
 
     <ul class="stats">

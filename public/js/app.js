@@ -13,6 +13,9 @@ var a;
 var ctx = document.getElementById("chart");
 var statearray=[];
 var totalcases=[];
+var headerindia= document.querySelector(".link");
+var headerstate=document.querySelector(".link2");
+var submitbtn=document.getElementById("submitbtn");
 
 function returnText() {
   state = document.getElementById("userInput").value;
@@ -99,6 +102,7 @@ function getstatechart() {
 }
 
 function indiatotal() {
+    console.log("hi");
     stateinput.style.display="none";
     stats.style.display="block";
   fetch("https://data.covid19india.org/v4/min/data.min.json")
@@ -156,3 +160,11 @@ function starthide(){
     stateinput.style.display="none";
     stats.style.display="none";
 }
+
+// headerindia.onclick=indiatotal();
+// headerstate.onclick=statewise();
+// submitbtn.onclick=returnText();
+headerindia.addEventListener('click', indiatotal);
+headerstate.addEventListener('click', statewise);
+submitbtn.addEventListener('click', returnText);
+starthide();
