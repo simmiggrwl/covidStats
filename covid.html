@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid-19</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer="true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+  </head>
+  <body onload="starthide()">
+    <h1>COVID-19 STATS</h1>
+      <header>
+          <a class ="link" onclick="indiatotal()">India Stats</a>
+          <a class="link2" onclick="statewise()">Filter By State</a>
+      </header>
+    <div class="divforflex">
+      <div class="stateflex">
+    <div class="stateinput">
+    <label>Enter state</label><br>
+    <input id="userInput" type="text" placeholder="State Acronym" />
+    <button onclick="returnText()">Submit</button>
+    </div>
+
+    <ul class="stats">
+      <li><b>Last Updated:</b><p class="stat0"></p></li>
+      <li><b>Confirmed Cases:</b><p class="stat1"></p></li>
+      <li><b>Deceased:</b><p class="stat2"></p></li>
+      <li><b>Recovered:</b><p class="stat3"></p></li>
+      <li><b>Tested:</b><p class="stat4"></p></li>
+      <li><b>Administered Dose1:</b><p class="stat5"></p></li>
+      <li><b>Administered Dose2:</b><p class="stat6"></p></li>
+    </ul>
+    </div>
+
+    <div class="statchart">
+      <div class="chart">
+    <h3 class="heading"></h3>
+    <canvas id = "chart" width="700px" height = "300px"> </canvas>
+    <canvas id="myCanvas"></canvas>
+    <legend for="myCanvas"></legend>
+    </div></div>
+
+    </div>
+    <footer>
+        <p><h3>References for state acronyms:</h3>
+            <b>AN:</b>Andaman&Nicobar  <b>AP:</b>Andhra Pradesh<b>  AR:</b>Arunachal Pradesh<b>  AS:</b>Assam<b>  BR:</b>Bihar<b>
+            CH:</b>Chandigarh<b>  CT:</b> Chattisgarh<b>  DL:</b>Delhi<b>  DN:</b>Dadra&Nagar<b>  GA:</b>Goa<b>  
+            GJ:</b>Gujarat  <b>HP:</b>Himachal Pradesh<b>  HR:</b>Haryana<b>  JH:</b>Jharkhand<b>  JK:</b>Jammu&Kashmir<b>
+            KA:</b> Karnataka<b>  KL:</b> Kerala<b>  LA:</b> Ladakh<b>  LD:</b> Lakshadweep<b>  MH:</b> Maharashtra<b>
+        ML:</b> Meghalaya<b>  MN:</b> Manipur<b>  MP:</b> Madhya Pradesh<b>  MZ:</b> Mizoram<b>  NL:</b> Nagaland<b>  OR:</b> Orissa
+        <b>  PB:</b> Punjab<b>  PY:</b> Pondicherry<b>  RJ:</b>Rajasthan<b>  SK:</b> Sikkim<b>  TG:</b> Telangana<b>
+        TN:</b>Tamil Nadu<b>  TR:</b>Tripura<b>  UP:</b>Uttar Pradesh<b>  UT:</b>Uttarakhand<b>  WB:</b>West Bengal
+        </p>
+    </footer>
+  </body>
+</html>
